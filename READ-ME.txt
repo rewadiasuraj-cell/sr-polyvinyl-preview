@@ -1,0 +1,7 @@
+S. R. Polyvinyl - Client Preview
+
+Extract the folder and open index.html in Chrome or Edge. Alternatively open the separate standalone HTML file. No server required.
+
+Original client-supplied logo. Extended homepage, 16 product groups, individual detail pages, About and Contact. AI-generated photography is illustrative, not actual supplied products or company facilities. Unknown specifications remain marked for confirmation.
+
+The enquiry form prepares a preview only; nothing is sent automatically. The live company website has not been changed.
