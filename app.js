@@ -8,24 +8,24 @@ menu.addEventListener('click',()=>{
 
 const base='https://srpolyvinyl.com/srpolyvinyl/';
 
-// Full 16 product groups reflecting the updated catalogue
+// Full 16 product groups with category badges and targeted related products
 const products=[
-  {name:'Artificial Grass',slug:'artificial-grass',image:'product-grass.png',source:'artificial-grass.php'},
-  {name:'EVA',slug:'eva',image:'product-eva.png',source:'eva.php'},
-  {name:'PU Resin (Footwear)',slug:'pu-resin-footwear',image:'product-footwear.png',source:'pu-resin-footware.php'},
-  {name:'PVC Resin Suspension',slug:'pvc-resin-suspension',image:'product-resin-powder.png',source:'pvc-resin-suspension.php'},
-  {name:'PVC Resin Paste',slug:'pvc-resin-paste',image:'product-resin-powder.png',source:'pvc-resinp-paste.php'},
-  {name:'PVC Resin Copolymer',slug:'pvc-resin-copolymer',image:'product-resin-powder.png',source:'pvc-resin-copolymer.php'},
-  {name:'Plasticizers (Primary & Secondary)',slug:'plasticizers',image:'product-chemical-supply.png',source:'index.php'},
-  {name:'Release Paper',slug:'release-paper',image:'product-release-paper.png',source:'casting-release-paper.php'},
-  {name:'Blowing Agent (Azodicarbonamide)',slug:'blowing-agent',image:'product-blowing-agent.png',source:'blowing-agent.php'},
-  {name:'PU Adhesive',slug:'pu-adhesive',image:'product-adhesive.png',source:'pu-adhesive.php'},
-  {name:'Processing Aid',slug:'processing-aid',image:'product-resin-powder.png',source:'index.php'},
-  {name:'CPE',slug:'cpe',image:'product-resin-powder.png',source:'index.php'},
-  {name:'Methyl Tin Stabilizer',slug:'methyl-tin-stabilizer',image:'product-chemical-supply.png',source:'methyl-tin-stabilizer.php'},
-  {name:'De-aromatised Solvents',slug:'de-aromatised-solvents',image:'product-chemical-supply.png',source:null},
-  {name:'Additives for PVC Leather',slug:'additives-for-pvc-leather',image:'product-additives.png',source:null},
-  {name:'Chlorinated Paraffin (CPW)',slug:'chlorinated-paraffin-cpw',image:'product-chemical-supply.png',source:null}
+  {name:'Artificial Grass',slug:'artificial-grass',tag:'Synthetic Turf',image:'product-grass.png',source:'artificial-grass.php',related:['pu-adhesive','eva','plasticizers','cpe']},
+  {name:'EVA',slug:'eva',tag:'Copolymer Resin',image:'product-eva.png',source:'eva.php',related:['pu-resin-footwear','pu-adhesive','blowing-agent','plasticizers']},
+  {name:'PU Resin (Footwear)',slug:'pu-resin-footwear',tag:'Footwear Systems',image:'product-footwear.png',source:'pu-resin-footware.php',related:['pu-adhesive','eva','plasticizers','chlorinated-paraffin-cpw']},
+  {name:'PVC Resin Suspension',slug:'pvc-resin-suspension',tag:'Extrusion Grade',image:'product-resin-powder.png',source:'pvc-resin-suspension.php',related:['methyl-tin-stabilizer','cpe','processing-aid','plasticizers']},
+  {name:'PVC Resin Paste',slug:'pvc-resin-paste',tag:'Plastisol Grade',image:'product-resin-powder.png',source:'pvc-resinp-paste.php',related:['plasticizers','additives-for-pvc-leather','blowing-agent','chlorinated-paraffin-cpw']},
+  {name:'PVC Resin Copolymer',slug:'pvc-resin-copolymer',tag:'VC/VAc Copolymer',image:'product-resin-powder.png',source:'pvc-resin-copolymer.php',related:['pvc-resin-paste','plasticizers','de-aromatised-solvents','pu-adhesive']},
+  {name:'Plasticizers (Primary & Secondary)',slug:'plasticizers',tag:'Plasticizers',image:'product-chemical-supply.png',source:'index.php',related:['pvc-resin-paste','chlorinated-paraffin-cpw','pvc-resin-suspension','additives-for-pvc-leather']},
+  {name:'Release Paper',slug:'release-paper',tag:'Casting Lines',image:'product-release-paper.png',source:'casting-release-paper.php',related:['pvc-resin-paste','additives-for-pvc-leather','blowing-agent','pu-adhesive']},
+  {name:'Blowing Agent (Azodicarbonamide)',slug:'blowing-agent',tag:'Foaming Agent',image:'product-blowing-agent.png',source:'blowing-agent.php',related:['pvc-resin-paste','additives-for-pvc-leather','eva','release-paper']},
+  {name:'PU Adhesive',slug:'pu-adhesive',tag:'Bonding Systems',image:'product-adhesive.png',source:'pu-adhesive.php',related:['pu-resin-footwear','eva','de-aromatised-solvents','release-paper']},
+  {name:'Processing Aid',slug:'processing-aid',tag:'Acrylic Modifier',image:'product-resin-powder.png',source:'index.php',related:['pvc-resin-suspension','cpe','methyl-tin-stabilizer','plasticizers']},
+  {name:'CPE',slug:'cpe',tag:'Impact Modifier',image:'product-resin-powder.png',source:'index.php',related:['pvc-resin-suspension','processing-aid','methyl-tin-stabilizer','plasticizers']},
+  {name:'Methyl Tin Stabilizer',slug:'methyl-tin-stabilizer',tag:'Heat Stabilizer',image:'product-chemical-supply.png',source:'methyl-tin-stabilizer.php',related:['pvc-resin-suspension','cpe','processing-aid','plasticizers']},
+  {name:'De-aromatised Solvents',slug:'de-aromatised-solvents',tag:'Aliphatic Solvents',image:'product-chemical-supply.png',source:null,related:['additives-for-pvc-leather','pvc-resin-paste','pu-adhesive','plasticizers']},
+  {name:'Additives for PVC Leather',slug:'additives-for-pvc-leather',tag:'Leather Chemicals',image:'product-additives.png',source:null,related:['pvc-resin-paste','release-paper','blowing-agent','de-aromatised-solvents']},
+  {name:'Chlorinated Paraffin (CPW)',slug:'chlorinated-paraffin-cpw',tag:'Flame Retardant',image:'product-chemical-supply.png',source:null,related:['plasticizers','pvc-resin-paste','pvc-resin-suspension','additives-for-pvc-leather']}
 ].map((p,i)=>({...p,number:String(i+1).padStart(2,'0')}));
 
 // Removed standalone products mapping for friendly contextual redirects
@@ -69,7 +69,10 @@ function card(p){
   return `<a class="product-card" href="#/products/${p.slug}">
     <div class="product-image">${productImage(p)}</div>
     <div class="card-body">
-      <span class="card-number">MATERIAL / ${p.number}</span>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <span class="card-number" style="margin-bottom:0;">MATERIAL / ${p.number}</span>
+        ${p.tag?`<span style="font-size:10px;font-weight:700;letter-spacing:.05em;color:var(--red);background:#fbebed;padding:2px 7px;border-radius:2px;">${escapeHtml(p.tag)}</span>`:''}
+      </div>
       <h3>${escapeHtml(p.name)}</h3>
       <span class="text-link">View product details</span>
     </div>
@@ -678,6 +681,17 @@ function solventsPage(){
     <div class="notice">
       <strong>Technical specifications available on request:</strong> Detailed Certificates of Analysis (CoA), density, distillation curves, and solvent viscosity data sheets are provided upon request for your specific batch.
     </div>
+  </section>
+  <section class="section wrap" style="background:#f4f5f6;padding-block:60px;">
+    <div class="wrap">
+      <div class="section-heading">
+        <h2>Related Raw Materials</h2>
+        <a class="text-link" href="#/products">Full catalog</a>
+      </div>
+      <div class="cards">
+        ${['additives-for-pvc-leather','pvc-resin-paste','pu-adhesive','plasticizers'].map(s=>products.find(x=>x.slug===s)).filter(Boolean).map(card).join('')}
+      </div>
+    </div>
   </section>`+cta('De-aromatised Solvents');
 }
 
@@ -757,6 +771,17 @@ function pvcAdditivesPage(){
           <div><dt>Storage Stability</dt><dd>Cool, dry, well-ventilated storage</dd></div>
           <div><dt>Commercial Quotes</dt><dd>Available on direct enquiry</dd></div>
         </dl>
+      </div>
+    </div>
+  </section>
+  <section class="section wrap" style="background:#f4f5f6;padding-block:60px;">
+    <div class="wrap">
+      <div class="section-heading">
+        <h2>Related Raw Materials</h2>
+        <a class="text-link" href="#/products">Full catalog</a>
+      </div>
+      <div class="cards">
+        ${['pvc-resin-paste','release-paper','blowing-agent','de-aromatised-solvents'].map(s=>products.find(x=>x.slug===s)).filter(Boolean).map(card).join('')}
       </div>
     </div>
   </section>`+cta('Additives for PVC Leather');
@@ -858,6 +883,17 @@ function cpwPage(){
           <div><dt>Color</dt><dd>Water-white to pale yellow liquid</dd></div>
           <div><dt>Volatile Loss (180°C/4hr)</dt><dd>&le; 1.0% max</dd></div>
         </dl>
+      </div>
+    </div>
+  </section>
+  <section class="section wrap" style="background:#f4f5f6;padding-block:60px;">
+    <div class="wrap">
+      <div class="section-heading">
+        <h2>Related Raw Materials</h2>
+        <a class="text-link" href="#/products">Full catalog</a>
+      </div>
+      <div class="cards">
+        ${['plasticizers','pvc-resin-paste','pvc-resin-suspension','additives-for-pvc-leather'].map(s=>products.find(x=>x.slug===s)).filter(Boolean).map(card).join('')}
       </div>
     </div>
   </section>`+cta('Chlorinated Paraffin (CPW)');
@@ -977,14 +1013,14 @@ function genericDetail(p){
     </div>
   </section>
 
-  <section class="section wrap">
+  <section class="section wrap" style="background:#f4f5f6;padding-block:60px;">
     <div class="wrap">
       <div class="section-heading">
-        <h2>Continue Exploring</h2>
+        <h2>Related Raw Materials</h2>
         <a class="text-link" href="#/products">Full catalog</a>
       </div>
       <div class="cards">
-        ${products.filter(x=>x!==p).slice(0,4).map(card).join('')}
+        ${(p.related?p.related.map(s=>products.find(x=>x.slug===s)).filter(Boolean):products.filter(x=>x!==p).slice(0,4)).map(card).join('')}
       </div>
     </div>
   </section>`+cta(p.name);
