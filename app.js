@@ -257,14 +257,23 @@ function catalogue(){
 function about(){
   return head('About S. R. Polyvinyl Ltd.','Reliable chemical distributor and raw material stockist based in New Delhi since 2001.')+`
   <section class="section wrap">
-    <div class="split">
+    <div class="split" style="align-items:center;">
       <div>
         <p class="eyebrow">ABOUT S. R. POLYVINYL LTD.</p>
         <h2>Our Story</h2>
+        <p class="copy">Established in 2001 in New Delhi, India, <strong>S. R. Polyvinyl Ltd.</strong> has grown into a trusted distributor and stockist of chemical raw materials, specialty polymers, and industrial additives. Over more than two decades, we have built enduring supply partnerships by bridging industrial chemical producers with manufacturing units across North India and nationwide.</p>
+        <p class="copy">We operate strictly as a dedicated stocking distributor, focusing on supply consistency, competitive commercial terms, and prompt fulfillment for critical production lines.</p>
+        <div class="strengths" style="margin-top:24px;">
+          <div><span>Competitive<br>Pricing</span></div>
+          <div><span>Timely<br>Delivery</span></div>
+          <div><span>Verified<br>Quality</span></div>
+        </div>
       </div>
       <div>
-        <p class="copy">Established in 2001 in New Delhi, India, <strong>S. R. Polyvinyl Ltd.</strong> has grown into a trusted distributor and stockist of chemical raw materials and specialty polymers. Over more than two decades, we have built enduring supply partnerships by bridging industrial chemical producers with manufacturing units across North India and nationwide.</p>
-        <p class="copy">We operate strictly as a dedicated stocking distributor, focusing on supply consistency, competitive commercial terms, and prompt fulfillment for critical production lines.</p>
+        <div class="about-photo" style="border-radius:4px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
+          <img src="assets/about-resin.png" alt="S. R. Polyvinyl chemical raw material supply and polymer stock" loading="lazy" style="width:100%;height:380px;object-fit:cover;">
+        </div>
+        <p class="source-note" style="margin-top:8px;">High-grade polymer resins and raw materials distributed from New Delhi.</p>
       </div>
     </div>
   </section>
@@ -274,58 +283,95 @@ function about(){
       <p class="eyebrow">PORTFOLIO &amp; EXPERTISE</p>
       <h2>Our Product Portfolio</h2>
       <p class="copy" style="max-width:850px;margin-bottom:28px;">Our 16-group catalog covers the complete spectrum of PVC compounding and processing inputs. We distribute PVC paste resins (dispersion grades) for plastisols, PVC suspension resins across standard K-values, copolymer resins, chlorinated paraffin (CPW), primary and secondary plasticizers, de-aromatised solvents (D-40 to D-130), azodicarbonamide blowing agents, methyl tin stabilizers, CPE, processing aids, release paper, and specialized additives for PVC leather.</p>
-      <div class="values">
-        <div class="value">
-          <span>01 / RESINS &amp; POLYMERS</span>
-          <h3>PVC, EVA &amp; PU</h3>
-          <p>Complete resin choices for rigid extrusion, flexible calendering, plastisol coating, and footwear molding.</p>
-        </div>
-        <div class="value">
-          <span>02 / PLASTICIZERS &amp; SOLVENTS</span>
-          <h3>Plasticizers &amp; Dearom Solvents</h3>
-          <p>Primary plasticizers, CPW 52 secondary plasticizer, and clean, low-odor de-aromatised aliphatic solvents.</p>
-        </div>
-        <div class="value">
-          <span>03 / FUNCTIONAL ADDITIVES</span>
-          <h3>Leather Additives &amp; Aids</h3>
-          <p>Dispersing agents, bonding agents, surface treatment lacquers, stabilizers, and blowing agents.</p>
-        </div>
+      
+      <div class="industry-grid" style="margin-top:28px;">
+        <article class="industry-card" style="background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;">
+          <img src="assets/product-resin-powder.png" alt="PVC and polymer resins" loading="lazy" style="height:190px;">
+          <div style="padding:22px;">
+            <span style="color:var(--red);">01 / RESINS &amp; POLYMERS</span>
+            <h3 style="color:var(--ink);font-size:20px;margin:10px 0;">PVC, EVA &amp; PU Resins</h3>
+            <p style="color:var(--muted);font-size:14px;line-height:1.6;">Complete resin choices for rigid extrusion, flexible calendering, plastisol coating, and footwear molding.</p>
+            <a class="text-link" href="#/products/pvc-resin-paste" style="margin-top:10px;">Explore Paste Resin</a>
+          </div>
+        </article>
+        <article class="industry-card" style="background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;">
+          <img src="assets/product-chemical-supply.png" alt="Plasticizers and dearomatised solvents" loading="lazy" style="height:190px;">
+          <div style="padding:22px;">
+            <span style="color:var(--red);">02 / PLASTICIZERS &amp; SOLVENTS</span>
+            <h3 style="color:var(--ink);font-size:20px;margin:10px 0;">Plasticizers &amp; Dearom Solvents</h3>
+            <p style="color:var(--muted);font-size:14px;line-height:1.6;">Primary plasticizers, CPW 52 secondary plasticizer, and clean, low-odor de-aromatised aliphatic solvents.</p>
+            <a class="text-link" href="#/products/de-aromatised-solvents" style="margin-top:10px;">Explore Solvents</a>
+          </div>
+        </article>
+        <article class="industry-card" style="background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;">
+          <img src="assets/product-additives.png" alt="Functional additives for PVC leather" loading="lazy" style="height:190px;">
+          <div style="padding:22px;">
+            <span style="color:var(--red);">03 / FUNCTIONAL ADDITIVES</span>
+            <h3 style="color:var(--ink);font-size:20px;margin:10px 0;">Leather Additives &amp; Aids</h3>
+            <p style="color:var(--muted);font-size:14px;line-height:1.6;">Dispersing agents, bonding agents, surface treatment lacquers, stabilizers, and blowing agents.</p>
+            <a class="text-link" href="#/products/additives-for-pvc-leather" style="margin-top:10px;">Explore Additives</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
   <section class="section wrap">
-    <div class="split">
+    <div class="section-heading">
       <div>
         <p class="eyebrow">MARKETS &amp; APPLICATIONS</p>
         <h2>Industries We Serve</h2>
-        <p class="copy">Our materials portfolio directly supports demanding production cycles across multiple key sectors:</p>
       </div>
-      <div>
-        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;">
-          <li style="border-left:3px solid var(--red);padding-left:16px;"><strong>Artificial Leather &amp; Rexine:</strong> Paste resin, release paper, blowing agents, plasticizers, bonding and dispersing additives.</li>
-          <li style="border-left:3px solid var(--red);padding-left:16px;"><strong>Pipes, Fittings &amp; Profiles:</strong> PVC suspension resins, methyl tin stabilizers, CPE impact modifiers, and processing aids.</li>
-          <li style="border-left:3px solid var(--red);padding-left:16px;"><strong>Footwear &amp; Soling:</strong> EVA resins, PU footwear systems, PU adhesives, and compounding plasticizers.</li>
-          <li style="border-left:3px solid var(--red);padding-left:16px;"><strong>Wires, Cables &amp; Coatings:</strong> Chlorinated paraffin, suspension resins, and industrial de-aromatised solvents.</li>
-        </ul>
-      </div>
+      <p class="section-summary">Our chemical materials portfolio powers demanding manufacturing lines across multiple industrial sectors.</p>
+    </div>
+    
+    <div class="industry-grid">
+      <article class="industry-card" style="background:#172530;border-radius:4px;overflow:hidden;">
+        <img src="assets/product-release-paper.png" alt="Artificial Leather and synthetic leathercloth raw materials" loading="lazy" style="height:210px;">
+        <div style="padding:24px;">
+          <span style="color:#e36b75;">01 / ARTIFICIAL LEATHER</span>
+          <h3 style="color:#fff;font-size:21px;margin:12px 0;">Rexine &amp; Coated Fabrics</h3>
+          <p style="color:#c1cad2;font-size:14px;">PVC paste resin, casting release paper, blowing agents, plasticizers, and bonding additives.</p>
+          <a class="dark-link" href="#/products/additives-for-pvc-leather" style="margin-top:12px;">View leather additives</a>
+        </div>
+      </article>
+
+      <article class="industry-card" style="background:#172530;border-radius:4px;overflow:hidden;">
+        <img src="assets/hero-warehouse.png" alt="Pipes, fittings and profiles raw materials" loading="lazy" style="height:210px;">
+        <div style="padding:24px;">
+          <span style="color:#e36b75;">02 / PIPES &amp; PROFILES</span>
+          <h3 style="color:#fff;font-size:21px;margin:12px 0;">Extrusion &amp; Rigid Vinyl</h3>
+          <p style="color:#c1cad2;font-size:14px;">PVC suspension resins (K-57, K-67), methyl tin stabilizers, CPE impact modifiers, and processing aids.</p>
+          <a class="dark-link" href="#/products/pvc-resin-suspension" style="margin-top:12px;">View suspension PVC</a>
+        </div>
+      </article>
+
+      <article class="industry-card" style="background:#172530;border-radius:4px;overflow:hidden;">
+        <img src="assets/product-footwear.png" alt="Footwear soling and polymer materials" loading="lazy" style="height:210px;">
+        <div style="padding:24px;">
+          <span style="color:#e36b75;">03 / FOOTWEAR &amp; SOLING</span>
+          <h3 style="color:#fff;font-size:21px;margin:12px 0;">Soles, Midsoles &amp; Uppers</h3>
+          <p style="color:#c1cad2;font-size:14px;">EVA resins, PU footwear systems, PU adhesives, and compounding plasticizers for durable soling.</p>
+          <a class="dark-link" href="#/products/pu-resin-footwear" style="margin-top:12px;">View footwear resins</a>
+        </div>
+      </article>
     </div>
   </section>
 
   <section class="section wrap story" style="background:#f4f5f6;padding-block:60px;">
-    <div class="wrap split">
+    <div class="wrap split" style="align-items:center;">
       <div>
         <p class="eyebrow">CORE VALUES</p>
         <h2>Our Approach</h2>
         <p class="copy">We believe chemical distribution requires precision, transparent communication, and reliable fulfillment. Our team works closely with plant managers, technical formulators, and procurement heads to ensure required grades arrive on schedule with verified manufacturer documentation.</p>
-      </div>
-      <div>
-        <p class="eyebrow">DIRECT CONTACT</p>
-        <h2>Get in Touch</h2>
-        <p class="copy">Connect with our New Delhi office to discuss current availability, manufacturer grade equivalents, minimum order volumes, and delivery logistics for your manufacturing plant.</p>
         <div class="actions" style="margin-top:24px;">
           <a class="button" href="#/contact">Contact Our Delhi Office</a>
-          <a class="dark-link" href="#/products" style="color:var(--ink);border-color:var(--muted)">Explore Product Range</a>
+          <a class="button outline" href="#/products">Explore Product Range</a>
+        </div>
+      </div>
+      <div>
+        <div style="border-radius:4px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.08);">
+          <img src="assets/materials-studio.png" alt="Quality raw materials stock and warehouse distribution" loading="lazy" style="width:100%;height:320px;object-fit:cover;">
         </div>
       </div>
     </div>
