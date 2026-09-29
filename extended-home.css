@@ -7,3 +7,10 @@
 
 /* Text-only navigation control; company branding stays unchanged. */
 .menu-toggle{font-size:13px;line-height:1.4;min-height:44px;min-width:44px}
+
+/* Relevant photographic backdrops for catalogue and contact headers. */
+.page-head--materials,.page-head--contact{background-color:#111b24;background-size:cover;background-repeat:no-repeat}
+.page-head--materials{background-image:linear-gradient(90deg,rgba(5,12,18,.94) 0%,rgba(5,12,18,.83) 42%,rgba(5,12,18,.42) 76%,rgba(5,12,18,.28) 100%),url("assets/materials-studio.png");background-position:center 68%}
+.page-head--contact{background-image:linear-gradient(90deg,rgba(5,12,18,.94) 0%,rgba(5,12,18,.8) 42%,rgba(5,12,18,.35) 76%,rgba(5,12,18,.2) 100%),url("assets/hero-warehouse.png");background-position:center 51%}
+.page-head--materials .lead,.page-head--contact .lead,.page-head--materials .crumbs,.page-head--contact .crumbs{color:#e3e8ed}
+@media(max-width:760px){.page-head--materials{background-position:58% 65%;background-image:linear-gradient(90deg,rgba(5,12,18,.88),rgba(5,12,18,.73)),url("assets/materials-studio.png")}.page-head--contact{background-position:68% center;background-image:linear-gradient(90deg,rgba(5,12,18,.9),rgba(5,12,18,.68)),url("assets/hero-warehouse.png")}}
