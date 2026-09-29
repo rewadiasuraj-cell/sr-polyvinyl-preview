@@ -14,3 +14,45 @@
 .page-head--contact{background-image:linear-gradient(90deg,rgba(5,12,18,.94) 0%,rgba(5,12,18,.8) 42%,rgba(5,12,18,.35) 76%,rgba(5,12,18,.2) 100%),url("assets/hero-warehouse.png");background-position:center 51%}
 .page-head--materials .lead,.page-head--contact .lead,.page-head--materials .crumbs,.page-head--contact .crumbs{color:#e3e8ed}
 @media(max-width:760px){.page-head--materials{background-position:58% 65%;background-image:linear-gradient(90deg,rgba(5,12,18,.88),rgba(5,12,18,.73)),url("assets/materials-studio.png")}.page-head--contact{background-position:68% center;background-image:linear-gradient(90deg,rgba(5,12,18,.9),rgba(5,12,18,.68)),url("assets/hero-warehouse.png")}}
+
+/* Subproducts & Grade Comparison Layouts */
+.subproduct-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:28px}
+.subproduct-item{background:#fff;border:1px solid var(--line);border-radius:4px;padding:26px;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s}
+.subproduct-item:hover{border-color:var(--red);box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.subproduct-badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--red);background:#fbebed;padding:4px 10px;border-radius:3px;margin-bottom:14px;align-self:flex-start}
+.subproduct-item h3{font-size:19px;margin:0 0 10px;color:var(--ink)}
+.subproduct-item p{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.subproduct-specs{font-size:13px;background:#f8f9fa;padding:12px 16px;border-radius:3px;margin-top:auto;border-left:3px solid var(--red)}
+.subproduct-specs strong{color:var(--ink);display:block;margin-bottom:4px}
+
+/* Technical Table Layouts */
+.spec-table-wrap{overflow-x:auto;margin:28px 0;background:#fff;border:1px solid var(--line);border-radius:4px}
+.spec-table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}
+.spec-table th{background:#111b24;color:#fff;padding:14px 18px;font-weight:600;letter-spacing:.02em}
+.spec-table td{padding:13px 18px;border-bottom:1px solid var(--line);color:var(--ink)}
+.spec-table tr:last-child td{border-bottom:none}
+.spec-table tr:nth-child(even) td{background:#fafbfc}
+.spec-table tr:hover td{background:#f1f4f7}
+
+/* FAQ Accordion Styling */
+.faq-wrap{margin-top:32px;display:flex;flex-direction:column;gap:14px}
+.faq-card{background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.faq-card summary{padding:18px 22px;font-weight:600;font-size:16px;cursor:pointer;background:#fafbfc;color:var(--ink);display:flex;justify-content:space-between;align-items:center;list-style:none}
+.faq-card summary::-webkit-details-marker{display:none}
+.faq-card summary::after{content:'+';font-size:20px;color:var(--red);font-weight:700;transition:transform .2s}
+.faq-card[open] summary::after{content:'−'}
+.faq-card[open] summary{background:#f3f6f9;border-bottom:1px solid var(--line);color:var(--red)}
+.faq-content{padding:20px 22px;font-size:14px;line-height:1.7;color:var(--muted)}
+.faq-content p:last-child{margin-bottom:0}
+
+/* Redirect / Notice Banner */
+.redirect-banner{background:#fff8e6;border:1px solid #fedc97;border-left:4px solid #d97706;padding:20px 24px;border-radius:4px;margin-bottom:30px}
+.redirect-banner h3{color:#92400e;margin:0 0 8px;font-size:17px}
+.redirect-banner p{color:#78350f;margin:0 0 12px;font-size:14px}
+.redirect-banner .actions{margin-top:10px}
+
+/* Tab Navigation for Solvents / Categories */
+.filter-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 20px}
+.tab-btn{background:#fff;border:1px solid var(--line);padding:9px 18px;font-size:13px;font-weight:600;color:var(--ink);border-radius:3px;cursor:pointer;transition:all .15s}
+.tab-btn:hover,.tab-btn.active{background:var(--red);color:#fff;border-color:var(--red)}
+
