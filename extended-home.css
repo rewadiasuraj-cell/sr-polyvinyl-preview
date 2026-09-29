@@ -4,3 +4,6 @@
 @media(max-width:360px){.original-logo{width:140px;height:77px}.header-enquiry.button{padding:9px;font-size:9px}.header-inner{gap:6px}.product-image{height:235px}.industry-card>img{height:225px}}
 
 @media(min-width:1051px){.header-inner.wrap,.hero-content.wrap{width:calc(100% - 128px);max-width:none;margin-inline:64px}.header-inner .original-logo{object-position:left center}.hero-content{text-align:left}}
+
+/* Text-only navigation control; company branding stays unchanged. */
+.menu-toggle{font-size:13px;line-height:1.4;min-height:44px;min-width:44px}
